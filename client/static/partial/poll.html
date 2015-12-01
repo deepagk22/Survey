@@ -1,0 +1,36 @@
+<div ng-controller='pollController'>
+	<a href="#/dashboard">Go To Poll</a>
+	<h3>{{answer.question}}</h3>
+	<div>Click on the Vote button to chose one</div>
+	<table border="1">
+ 	  	<tr>
+ 	  		<td>Option</td>
+ 	  		<td>Current Number Of Votes</td>
+ 	  		<td>Action</td>
+ 	  	</tr>
+ 	  	<tr>
+ 	  		<td><span ng-bind ="answer.option1"></span></td>
+ 	  		<td><span ng-bind ="answer.vote1"></span></td>
+ 	  		<td><button ng-click="answerVote(answer._id,'vote1')">Vote</button></td>
+ 	  	</tr>
+ 	  	<tr>
+ 	  		<td><span ng-bind ="answer.option2"></span></td>
+ 	  		<td><span ng-bind ="answer.vote2"></span></td>
+ 	  		<td><button ng-click="answerVote(answer._id,'vote2')">Vote</button></td>
+ 	  	</tr>
+ 	  	<tr>
+ 	  		<td><span ng-bind ="answer.option3"></span></td>
+ 	  		<td><span ng-bind ="answer.vote3"></span></td>
+ 	  		<td><button ng-click="answerVote(answer._id,'vote3')">Vote</button></td>
+ 	  	</tr>
+ 	  	<tr>
+ 	  		<td><span ng-bind ="answer.option4"></span></td>
+ 	  		<td><span ng-bind ="answer.vote4"></span></td>
+ 	  		<td><button ng-click="answerVote(answer._id,'vote4')">Vote</button></td>
+ 	  	</tr>
+
+ 	  	</tr>
+	
+ 	</table>
+
+</div>

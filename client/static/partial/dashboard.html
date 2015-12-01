@@ -1,0 +1,21 @@
+ <div ng-controller='dashboardController'>
+ 	<div><a href="#/create">Create a new Poll</a> | <a href="#/logout">Logout</a></div>
+
+ 	<h3>Current Polls</h3>
+ 	  <input type="text" ng-model="filter_name">
+ 	  <table>
+ 	  	<tr>
+ 	  		<td>User Name</td>
+ 	  		<td>Survey Question</td>
+ 	  		<td>Date Posted</td>
+ 	  		<td>Action</td>
+ 	  	</tr>
+
+ 	  	<tr ng-repeat="question in questions | filter: filter_name">
+ 	  		<td><span ng-bind ="question.user_id.name"></span></td>
+ 	  		<td><a href="#/poll/{{question._id}}"><span ng-bind ="question.question"></a></td>
+ 	  		<td><span ng-bind ="question.created_at | date :'medium'"></td>
+ 	  		<td><a ng-show="showUserID(question.user_id)" ng-click="deleteQuestion(question)"><button>Delete</button></a></td>
+ 	  	</tr>
+ 	  </table>
+ </div>

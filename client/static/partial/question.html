@@ -1,0 +1,40 @@
+
+ <div ng-controller='questionController'>
+<div><b>Put the Questions and the option here:</b><span>         </span><span><a href="#/dashboard">Cancel</a></span></div>
+ 	
+<input type="hidden" ng-model="newquestion.userid">
+ 	<div>Question:
+ 		<textarea ng-model="newquestion.question"></textarea>
+ 		<span ng-show="hasValue('question')">Question must be more that 8 characters</span>
+ 	</div>
+ 	<div></div>
+  	<div>Option 1:
+ 		<input ng-model="newquestion.option1">
+ 		<span ng-show="hasValue('option1')">Options At least 3 characters</span>
+ 		
+ 	</div>
+ 	<div></div>
+ 	<div>Option 2:
+ 		<input ng-model="newquestion.option2">
+ 		<span ng-show="hasValue('option2')">Options At least 3 characters</span>
+ 		
+ 	</div>
+ 	<div></div>
+ 	<div>Option 3:
+ 		<input ng-model="newquestion.option3">
+ 		<span ng-show="hasValue('option3')">Options At least 3 characters</span>
+ 		
+ 	</div>
+ 	<div></div>
+ 	<div>Option 4:
+ 		<input ng-model="newquestion.option4">
+ 		<span ng-show="hasValue('option4')">Options At least 3 characters</span>
+ 		
+ 	</div>
+<div></div>
+ 	<div>{{sucessMsg}}</div>
+ 	<div></div>
+ 	<div><span><input type="submit" value="Create Poll" ng-click="addQuestion()"></span></div>
+ 	
+
+ </div>
